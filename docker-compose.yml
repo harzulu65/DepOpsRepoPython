@@ -9,14 +9,5 @@ services:
       - static_volume:/usr/src/CRUDoperation/static
     expose:
       - 8000
-  nginx:
-    build: ./nginx
-    image: 938451662784.dkr.ecr.us-west-2.amazonaws.com/django_docker_aws:django_docker_aws_nginx
-    volumes:
-      - static_volume:/usr/src/CRUDoperation/static
-    ports:
-      - 8000:80
-    depends_on:
-      - web
 volumes:
   static_volume:
