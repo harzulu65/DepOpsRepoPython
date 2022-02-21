@@ -2,7 +2,7 @@ version: "3.8"
 services:
   web:
     build: ./
-    image: 938451662784.dkr.ecr.us-west-2.amazonaws.com/django_docker_aws:django_docker_aws_web
+    image: 938451662784.dkr.ecr.us-west-2.amazonaws.com/python-django:python-django-docker-aws
     command: gunicorn python-django.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./:/usr/src/
