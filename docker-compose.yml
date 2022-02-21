@@ -1,12 +1,12 @@
 version: "3.8"
 services:
   web:
-    build: ./CRUDoperation
+    build: ./
     image: 938451662784.dkr.ecr.us-west-2.amazonaws.com/django_docker_aws:django_docker_aws_web
     command: gunicorn python-django.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - ./app/:/usr/src/CRUDoperation/
-      - static_volume:/usr/src/CRUDoperation/static
+      - ./:/usr/src/
+      - static_volume:/usr/src/static
     expose:
       - 8000
 volumes:
